@@ -3,6 +3,6 @@
 // Source: http://css-tricks.com/snippets/sass/px-to-em-functions/
 
 // Function that convrts pixels to rems
-@function rec($pixels, $content: 16) {
+@function rem($pixels, $content: 16) {
     @return ($pixels / $content) * 1rem;
 }

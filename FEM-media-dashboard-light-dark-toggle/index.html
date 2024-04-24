@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>Frontend Mentor | [Kaitlyn S]</title>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,15 +23,31 @@
   </style>
 </head>
 <body>
+  <header class="header container">
+    <div class="header__title">
+    <h1>Social Media Dashboard</h1>
+    <span class="header__subtitle">Followers: 23,004</span> 
+  </div>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+  <fieldset class="header__toggle toggle" aria-label="theme toggle" role="radiogroup">
+    <label for="dark">Dark</label>
 
-  Dark Mode
+    <div class="toggle__wrapper">
+      <input type="radio" name="theme" id="dark">
+      <input type="radio" name="theme" id="preference" checked>
+      <input type="radio" name="theme" id="light">
 
-  
+      <span aria-hidden="true" class="toggle__background"></span>
+      <span aria-hidden="true" class="toggle__switcher"></span>
+    </div>
 
-  @nathanf
+    <label for="preference">Preference</label>
+    <label for="light">Light</label>
+
+  </fieldset> 
+  </header>
+  <main>
+    @nathanf
   1987
   Followers
   12 Today
@@ -86,10 +102,18 @@
   Total Views
   1407
   12%
+  </main>
+
+  
+  
+
+  
+
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Kaitlyn</a>.
   </div>
 </body>
 </html>
