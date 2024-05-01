@@ -1,29 +1,68 @@
 @use '../util' as *;
 
 .toggle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     border: none;
+    gap: rem(12);
     
+    label {
+        &[for='dark'] {
+            justify-self: end;
+            grid-column: 1 / 2;
+        }
+        &[for='system'] {
+            justify-self: center;
+            grid-column: 1 / 4;
+            grid-row: 2 / 3;
+        }
+        &[for='light'] {
+            justify-self: start;
+            grid-column: 3 / 4;
+        }
+    }
+
     &__wrapper {
+        position: relative;
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        height: rem(24);
 
     }
 
     input[type="radio"] {
-
+        opacity: 0;
+        margin: 0;
     }
 
     &__background {
-
+        display: block;
+        position: absolute;    
+        top: 0;    
+        height: 100%;
+        width: 100%;
+        pointer-events: none;
+        
+        border-radius: rem(12);
+        overflow: hidden;
+        background: linear-gradient(225deg, var(--dark-toggle-bg-end) 0%,var(--dark-toggle-bg-start) 98.02%);
     }
 
     &__switcher {
-        width: rem(16);
-        height: rem(16);
+        position: absolute;
+        top: rem(3);
+        left: rem(3);
+        width: rem(18);
+        height: rem(18);
         border-radius: 50%;
         background-color: var(--light-toggle-bg);
     }
 
-    label {
-    
+    #light:checked ~ .toggle__switcher {
+        left: calc(100% - 21px);
+        right: 3px;
     }
+
 }
 
