@@ -26,79 +26,174 @@
   <header class="header container">
     <div class="header__title">
     <h1>Social Media Dashboard</h1>
-    <span class="header__subtitle">Followers: 23,004</span> 
+    <span class="header__subtitle">Total Followers: 23,004</span> 
   </div>
 
   <fieldset class="header__toggle toggle" aria-label="theme toggle" role="radiogroup">
     <div class="toggle__wrapper">
       <input type="radio" name="theme" id="dark">
-      <input type="radio" name="theme" id="preference" checked>
       <input type="radio" name="theme" id="light">
 
       <span aria-hidden="true" class="toggle__background"></span>
       <span aria-hidden="true" class="toggle__switcher"></span>
     </div>
-    <label for="dark">Dark</label>
-    <label for="system">System</label>
-    <label for="light">Light</label>  
+    <label for="dark">Dark Mode</label>
+    <label for="light" class="visually-hidden">Light</label>  
   </fieldset> 
   </header>
   <main>
-    @nathanf
-  1987
-  Followers
-  12 Today
+    <section class="container cards">
+      <div class="card card--facebook">
+        <div class="card__platform">
+          <img src="/images/icon-facebook.svg" alt="Facebook" class="card__icon">
+          <div class="card__username">@nathanf</div>
+        </div>
+        <div class="card__followers">
+          <div class="card__count card__count--big">1987</div>
+          <div class="card__label">Followers</div>
+      </div>
+        <div class="card__change card__change--up">
+          <img src="./images/icon-up.svg" alt="up arrow">
+          <div class="card__number">12 Today</div>
+      </div>
+      </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+      <div class="card card--twitter">
+        <div class="card__platform">
+          <img src="/images/icon-twitter.svg" alt="Twitter" class="card__icon">
+          <div class="card__username">@nathanf</div> 
+        </div>
+        <div class="card__followers">
+          <div class="card__count card__count--big">1044</div>
+          <div class="card__label">Followers</div>
+      </div>
+        <div class="card__change card__change--up">
+          <img src="./images/icon-up.svg" alt="up arrow">
+          <div class="card__number">99 Today</div>
+      </div>
+      </div>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+      <div class="card card--instagram">
+        <div class="card__platform">
+          <img src="/images/icon-instagram.svg" alt="Instagram" class="card__icon">
+          <div class="card__username">@realnathanf</div>
+        </div>
+        <div class="card__followers">
+          <div class="card__count card__count--big">11k</div>
+          <div class="card__label">Followers</div>
+      </div>
+        <div class="card__change card__change--up">
+          <img src="./images/icon-up.svg" alt="up arrow">
+          <div class="card__number">1099 Today</div>
+      </div>
+      </div>
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+      <div class="card card--youtube">
+        <div class="card__platform">
+          <img src="/images/icon-youtube.svg" alt="Youtube" class="card__icon">
+          <div class="card__username">Nathan F.</div>
+          
+        </div>
+        <div class="card__followers">
+          <div class="card__count card__count--big">8239</div>
+          <div class="card__label">Subscribers</div>
+      </div>
+        <div class="card__change card__change--down">
+          <img src="./images/icon-down.svg" alt="down arrow">
+          <div class="card__number">144 Today</div>
+      </div>
+      </div>
+    </section>
 
+    <section class="container">
+      <h2>Overview - Today</h2>
+      
+      <div class="cards">
 
+        <div class="card card-grid">
+          <div class="card__subitle">Page Views</div>
+          <img src="/images/icon-facebook.svg" alt="Facebook">
+          <div class="card__count card__count--small">87</div>
+          <div class="card__change card__change--up">
+            <img src="./images/icon-up.svg" alt="up arrow">
+            <div class="card__number">3%</div>
+          </div>
+        </div>
 
-  Overview - Today
+        <div class="card card-grid">
+          <div class="card__subitle">Likes</div>
+          <img src="/images/icon-facebook.svg" alt="Facebook">
+          <div class="card__count card__count--small">52</div>
+          <div class="card__change card__change--down">
+            <img src="./images/icon-down.svg" alt="down arrow">
+            <div class="card__number">2%</div>
+          </div>
+        </div>
 
-  Page Views
-  87
-  3%
+        <div class="card card-grid">
+          <div class="card__subitle">Likes</div>
+          <img src="/images/icon-instagram.svg" alt="Instagram" class="card__icon">
+          <div class="card__count card__count--small">5462</div>
+          <div class="card__change card__change--up">
+            <img src="./images/icon-up.svg" alt="up arrow">
+            <div class="card__number">2257%</div>
+          </div>
+        </div>
 
-  Likes
-  52
-  2%
+        <div class="card card-grid">
+          <div class="card__subitle">Profile Views</div>
+          <img src="/images/icon-instagram.svg" alt="Instagram" class="card__icon">
+          <div class="card__count card__count--small">52k</div>
+          <div class="card__change card__change--up">
+            <img src="./images/icon-up.svg" alt="up arrow">
+            <div class="card__number">1375%</div>
+          </div>
+        </div>
 
-  Likes
-  5462
-  2257%
+        <div class="card card-grid">
+          <div class="card__subitle">Retweets</div>
+          <img src="/images/icon-twitter.svg" alt="Twitter" class="card__icon">
+          <div class="card__count card__count--small">117</div>
+          <div class="card__change card__change--up">
+            <img src="./images/icon-up.svg" alt="up arrow">
+            <div class="card__number">2303%</div>
+          </div>
+        </div>
 
-  Profile Views
-  52k
-  1375%
+        <div class="card card-grid">
+          <div class="card__subitle">Likes</div>
+          <img src="/images/icon-twitter.svg" alt="Twitter" class="card__icon">
+          <div class="card__count card__count--small">507</div>
+          <div class="card__change card__change--up">
+            <img src="./images/icon-up.svg" alt="up arrow">
+            <div class="card__number">553%</div>
+          </div>
+        </div>
 
-  Retweets
-  117
-  303%
+        <div class="card card-grid">
+          <div class="card__subitle">Likes</div>
+          <img src="/images/icon-youtube.svg" alt="Youtube" class="card__icon">
+          <div class="card__count card__count--small">107</div>
+          <div class="card__change card__change--down">
+            <img src="./images/icon-down.svg" alt="down arrow">
+            <div class="card__number">19%</div>
+          </div>
+        </div>
 
-  Likes
-  507
-  553%
+        <div class="card card-grid">
+          <div class="card__subitle">Total Views</div>
+          <img src="/images/icon-youtube.svg" alt="Youtube" class="card__icon">
+          <div class="card__count card__count--small">1407</div>
+          <div class="card__change card__change--down">
+            <img src="./images/icon-down.svg" alt="down arrow">
+            <div class="card__number">12%</div>
+          </div>
+        </div>
 
-  Likes
-  107
-  19%
+      </div>
 
-  Total Views
-  1407
-  12%
+    </section>
+
   </main>
 
   
