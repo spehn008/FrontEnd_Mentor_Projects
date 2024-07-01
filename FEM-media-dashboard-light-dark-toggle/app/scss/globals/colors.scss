@@ -13,20 +13,69 @@
     --dark-bg-pattern: hsl(232, 19%, 15%);
     --dark-card-bg: hsl(228, 28%, 20%);
     --dark-card-hover: hsl(228, 25%, 27%);
-    --dark-text-blue: hsl(228, 34%, 66%);
-    --dark-text-white: hsl(0, 0%, 100%);
+    --dark-text1: hsl(228, 34%, 66%);
+    --dark-text2: hsl(0, 0%, 100%);
 
     //Dark theme, toggle
     --dark-toggle-bg-start: hsl(210, 78%, 56%);
     --dark-toggle-bg-end: hsl(146, 68%, 55%);
+    --dark-toggle-bg: linear-gradient(225deg, var(--dark-toggle-bg-end) 0%,var(--dark-toggle-bg-start) 98.02%);
 
     //Light theme
     --light-bg: hsl(0, 0%, 100%);
     --light-bg-pattern: hsl(225, 100%, 98%);
     --light-card-bg: hsl(227, 47%, 96%);
-    --light-text-blue: hsl(228, 12%, 44%);
-    --light-text-darkblue: hsl(230, 17%, 14%);
+    --light-card-hover: hsl(228, 33%, 91%);
+    --light-text1: hsl(230, 12%, 44%);
+    --light-text2: hsl(230, 17%, 14%);
 
     //Light theme, toggle
+    --light-toggle: hsl(230, 19%, 60%);
     --light-toggle-bg: hsl(230, 22%, 74%);
+    --light-toggle-button: hsl(228, 46%, 96%);
+
+    //Current color theme
+    --background: var(--light-bg);
+    --text-color: var(--light-text2);
+    --text-color2: var(--light-text1);
+    --card-bg: var(--light-card-bg);
+    --card-hover: var(--light-card-hover);
+    --toggle: var(--light-toggle);
+    --toggle-bg: var(--light-toggle-bg);
+    --toggle-button: var(--light-toggle-button);
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--dark-bg);
+        --text-color: var(--dark-text2);
+        --text-color2: var(--dark-text1);
+        --card-bg: var(--dark-card-bg);
+        --card-hover: var(--dark-card-hover);
+        --toggle: var(--light-bg);
+        --toggle-bg: var(--dark-toggle-bg);
+        --toggle-button: var(--dark-bg);
+        }
+}
+
+body.light {
+    --background: var(--light-bg);
+    --text-color: var(--light-text2);
+    --text-color2: var(--light-text1);
+    --card-bg: var(--light-card-bg);
+    --card-hover: var(--light-card-hover);
+    --toggle: var(--light-toggle);
+    --toggle-bg: var(--light-toggle-bg);
+    --toggle-button: var(--light-toggle-button);
+  }
+  
+  body.dark {
+    --background: var(--dark-bg);
+        --text-color: var(--dark-text2);
+        --text-color2: var(--dark-text1);
+        --card-bg: var(--dark-card-bg);
+        --card-hover: var(--dark-card-hover);
+        --toggle: var(--light-bg);
+        --toggle-bg: var(--dark-toggle-bg);
+        --toggle-button: var(--dark-bg);
+  }
