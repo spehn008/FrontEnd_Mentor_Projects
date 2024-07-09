@@ -1,112 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
 * {
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  /* Font */
+  --FONT: "Outfit", sans-serif;
+
+  /* Colors */
+  --DARK-NAVY: #1f314f;
+  --DARK-BLUE: #3e52a3;
+  --GREY: #6a7386; /* Old color #7d889e; */
+  --LIGHT-GREY: #d5e1ef;
+
+  /* Card */
+  --CARD-HEIGHT: 497px;
+  --CARD-WIDTH: 320px;
+  --CARD-PADDING: 16px;
+
+  /* Image */
+  --IMAGE-SIZE: 288px;
+}
+
+html,
+body,
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: var(--FONT);
+  text-align: center;
+
+  background-color: var(--LIGHT-GREY);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: var(--CARD-HEIGHT);
+  width: var(--CARD-WIDTH);
+  margin: 0 auto;
+  padding: var(--CARD-PADDING);
+
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0477);
+
+  a {
+    width: var(--IMAGE-SIZE);
+    height: var(--IMAGE-SIZE);
+
+    margin-bottom: 24px;
+  }
+
+  img {
     width: 100%;
-    box-sizing: border-box;
+    height: 100%;
 
-    margin: 0;
-    padding: 0;
+    border-radius: 10px;
   }
 
-  /* Variables */
-  :root {
-    /* Font */
-    --FONT: "Outfit", sans-serif;
+  a:hover, a:focus {
+      filter: brightness(150%);
+    }
+}
 
-    /* Colors */
-    --DARK-NAVY: #1F314F;
-    --DARK-BLUE: #3e52a3;
-    --GREY: #7D889E;
-    --LIGHT-GREY: #D5E1EF;
-  }
-
-  body {
-    overflow: hidden;
-
-    font-family: var(--FONT);
-    text-align: center;
-
-    background-color: var(--LIGHT-GREY);
-  }
-/* Wrap is still acting weird, need to reapproach this */
-  .container {
-    display: flex;
-    flex-direction: column;
-    columns: 1;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 16px;
-
-    height: 497px;
-    width: 320px;
-    margin:0 auto;
-
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0477);
-  }
-
-  .QR-code {
-    width: 288px;
-    height: 288px;
-    margin-top: 16px;
-    margin-bottom: 8px;
-
-    border-radius: 10px;  
-  }
-/* ask about if highlight is acceptible for accessibility*/
-  .QR-code-button {
-    height: 160px;
-    width: 160px;
-    margin-top: 80px;
-
-    position: fixed;
-    z-index: 5px;
-  }
-
-  a.QR-code-button:hover, a.QR-code-button:focus {
-    background-color: lightyellow;
-    opacity: 40%;
-  }
-
+.main-card-text {
   h1 {
-    height: auto;
-    padding:  0 16px;
-
     font-size: 22px;
     font: bold;
-    color: var(--DARK-NAVY);    
-}   
+    color: var(--DARK-NAVY);
+
+    margin-bottom: var(--CARD-PADDING);
+  }
 
   p {
-    padding: 0 24px;
-
     font-size: 15px;
     letter-spacing: 0.19px;
     color: var(--GREY);
   }
+}
 
-  .attribution {
-    align-self: center;
-    justify-self: center;
+.attribution {
+  margin: 0 auto;
+  align-self: center;
+  justify-self: center;
 
-    height: auto;
-    width: 320px;
-    padding-top: 8px;
+  height: auto;
+  width: 320px;
+  padding-top: 8px;
 
-    font-size: 11px;
-    color: var(--DARK-BLUE);
-  }
+  font-size: 11px;
+  color: var(--DARK-BLUE);
+}
 
-  .hidden {
-    opacity: 0;
-  }
-
+.hidden {
+  opacity: 0;
+}
